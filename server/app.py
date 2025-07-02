@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask, jsonify, request, render_template
-from models import db, DailyEntry
+from server.models import db, DailyEntry
 from datetime import datetime
 from flask_migrate import Migrate
 from flask_restful import Api
@@ -154,4 +154,4 @@ def get_user():
     return jsonify({"user": "test_user", "role": "admin"})
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    app.run(port=5555, debug=True)
