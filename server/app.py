@@ -1,7 +1,7 @@
 import os
 
 from flask import Flask, jsonify, request, render_template
-from server.models import db, DailyEntry
+from models import db, DailyEntry
 from datetime import datetime
 from flask_migrate import Migrate
 from flask_restful import Api
